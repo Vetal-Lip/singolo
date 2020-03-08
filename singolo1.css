@@ -34,16 +34,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Myriad-Pro';
-    src:url('./assets/fonts/MyriadPro-Regular.ttf') format('ttf'),
-    url('./assets/fonts/MyriadPro-Regular.woff2') format('woff2'),     
-    url('./assets/fonts/MyriadPro-Regular.woff') format('woff'); 
-            font-weight: normal;
-    font-style: normal;
-}
-
-
 
 body{
     margin: 0;
@@ -80,6 +70,7 @@ body{
     text-transform: uppercase;
     font-size: 25px;
     margin: 21px 0;
+    letter-spacing: -0.8px;
 }
 
 .logo-star{
@@ -181,17 +172,18 @@ h3{
 
 .services-title{
     padding-top: 59px;
-    letter-spacing: -1px;
-
+    letter-spacing: 0.09px;
+    font-size: 30px;
     font-family: Lato-Black, sans-serif;
     text-transform: capitalize;
     color: #666d89;
 }
 
 .services-description{
-    font-family: Myriad-Pro , sans-serif;
+    font-family: Lato-Light, sans-serif;
     font-size: 18px;
     color: #767e9e;
+    letter-spacing: -0.2px;
     line-height: 30px;
     text-align: justify;
 }
@@ -200,13 +192,13 @@ h3{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 28px;
+    padding-top: 29px;
 }
 
 .services-item{
     display: flex;
     width: 300px;
-    padding-bottom: 34px;
+    padding-bottom: 35px;
 }
 
 .item-wrapper{
@@ -233,3 +225,4 @@ h3{
     line-height: 21px;
     text-align: justify;
 }
+
