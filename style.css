@@ -51,6 +51,8 @@ body{
     background: #2d303a;
     font-family: Lato-Bold, sans-serif;
     border-bottom: 6px solid #323746;
+    position: fixed;
+    width: 1020px;
 }
 
 .header-wrapper{
@@ -112,14 +114,17 @@ body{
    color: #ffffff;
 }
 
-.list-link:hover,
-.list-link:active
-{
+.list-link:hover{
+    color:#f06c64;
+}
+
+.list-link--active{
     color:#f06c64;
 }
 
 /* === SLIDER ==== */
 .slider{
+    padding-top: 100px;
     width: 1020px;
     height: 594px;
     background-color: #f06c64;
