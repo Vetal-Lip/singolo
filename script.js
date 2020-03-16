@@ -89,7 +89,7 @@ for (let i = 0; i < portfolioButtons.length; i++) {
 }
 
 portfolioGallery.addEventListener('click', function (event) {
-  
+        if(event.target.tagName !== 'IMG') return
         let pictureSelected = portfolioGallery.querySelector('.portfolio-img--selected')
 
         console.log(pictureSelected)
