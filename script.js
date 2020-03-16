@@ -76,6 +76,7 @@ for (let i = 0; i < portfolioButtons.length; i++) {
             current[0].className = current[0].className.replace(" nav-button--active", " ");
         }
         this.className += ' nav-button--active';
+
         let pictures = [...document.querySelectorAll('.portfolio-img-conteiner>.img-item')];
         console.log(pictures)
         let shuffledPictures = pictures.slice();
@@ -84,7 +85,6 @@ for (let i = 0; i < portfolioButtons.length; i++) {
         shuffledPictures.forEach(el => portfolioGallery.append(el))
 
         console.log(shuffledPictures)
-
     })
 }
 
@@ -102,3 +102,36 @@ portfolioGallery.addEventListener('click', function (event) {
 })
 
 // ====================================================
+
+// ==================== Form ===========================
+const form = document.querySelector('.quote-form');
+const formButtonSubmit = document.querySelector('.form-button')
+const modalWindow = document.querySelector('.modal');
+console.log(form)
+form.addEventListener('submit', (event) => event.preventDefault())
+
+formButtonSubmit.addEventListener('click', function(){
+    const fieldName = document.querySelector('.form-name');
+    const fieldEmail = document.querySelector('.form-email');
+    console.log(fieldEmail, fieldName)
+    if(fieldName.validity.valid && fieldEmail.validity.valid){
+        modalWindow.classList.remove('display-none');
+
+        const fieldSubject = document.querySelector('.form-subject').value.toString();
+        const fieldTextarea = document.querySelector('.form-textarea').value.toString();
+        const textModalSubject = document.querySelector('.modal-subject');
+        const textModalDescribe = document.querySelector('.modal-describe');
+
+        textModalSubject.innerText = fieldSubject == false ? "Без темы" : `Тема: ${fieldSubject}`;
+        textModalDescribe.innerText = fieldTextarea == false ? "Без описания" : `Описание: ${fieldTextarea}`
+
+    }
+} )
+
+const modalBtnOk = document.querySelector('.modal-button');
+modalBtnOk.addEventListener('click', function(){
+    modalWindow.classList.add('display-none')
+    form.reset()
+})
+
+// =====================================================

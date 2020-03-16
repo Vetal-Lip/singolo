@@ -567,7 +567,10 @@ h3{
     color: #ffffff;
 }
 
-.form-input{
+.form-name,
+.form-email,
+.form-subject
+{
     width: 606px;
     height: 38px;
     border-radius: 3px;
@@ -582,7 +585,9 @@ h3{
     letter-spacing: 0.265px;
 }
 
-.form-input::placeholder,
+.form-name::placeholder,
+.form-email::placeholder,
+.form-subject::placeholder,
 .form-textarea::placeholder{
     color: #ffffff;
     opacity: 0.6;
@@ -665,6 +670,40 @@ h3{
 .contact-item > p{
     margin: 0;
     letter-spacing: 0.3px;
+}
+
+.modal{
+    background: grey;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 1020px;
+    height: 100%;
+    opacity: 0.95;
+    z-index: 100;
+}
+
+.text-conteiner{
+    display: flex;
+    justify-content: start;
+    background: #f06c64;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 200px;
+    min-height: 200px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.modal-button{
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+
 }
 
 /* =========================================================== */
