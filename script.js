@@ -20,6 +20,9 @@ const turnVerticalPhone = document.querySelector('.vertical-iPhone');
 const turnHorizontalPhone = document.querySelector('.horizontal-iPhone');
 const changeVerticalPhoneBG = document.querySelector('.bg-verticalscreen');
 const changeHorizontalPhoneBG = document.querySelector('.bg-horizontalscreen');
+const widthDisplay = document.querySelector('.slider-container');
+console.log(widthDisplay);
+console.log(widthDisplay.offsetWidth)
 
 let indexPosition = 0;
 
@@ -29,9 +32,9 @@ sliderLeft.addEventListener('click', function () {
         changeHorizontalPhoneBG.classList.add('display-none')
     }
     let slider = document.querySelector('.slider-polosa');
-    console.log(slider)
-    indexPosition = indexPosition - 1020;
-    if (indexPosition < -1020) {
+    console.log(slider.offsetWidth)
+    indexPosition = indexPosition - widthDisplay.offsetWidth;
+    if (indexPosition < -(widthDisplay.offsetWidth)) {
         indexPosition = 0;
     }
     slider.style.left = indexPosition + 'px';
@@ -44,10 +47,10 @@ sliderRight.addEventListener('click', function () {
     }
     let slider = document.querySelector('.slider-polosa');
     console.log(slider)
-    if (indexPosition === -1020) {
-        indexPosition = indexPosition + 1020;
+    if (indexPosition === -(widthDisplay.offsetWidth)) {
+        indexPosition = indexPosition + widthDisplay.offsetWidth;
     } else {
-        indexPosition = indexPosition - 1020;
+        indexPosition = indexPosition - widthDisplay.offsetWidth;
     }
 
     slider.style.left = indexPosition + 'px';

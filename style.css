@@ -1149,7 +1149,7 @@ h3{
 
 /* === SLIDER ==== */
 .slider{
-    padding-top: 95px;
+    padding-top: 70px;
     width: 375px;
     height: 218px;
     background-color: #f06c64;
@@ -1213,14 +1213,14 @@ h3{
 
 .slider-leftbtn{
     position: absolute;
-    left: 1.7%;
-    top: 37.82%;
+    left: 14px;
+    top: 159px;
 }
 
 .slider-rightbtn{
     position: absolute;
     left: 350px;
-    top: 37.82%;
+    top:159px;
 } 
 /* ========================================================= */
 
