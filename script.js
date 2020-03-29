@@ -89,15 +89,15 @@ for (let i = 0; i < portfolioButtons.length; i++) {
 }
 
 portfolioGallery.addEventListener('click', function (event) {
-        if(event.target.tagName !== 'IMG') return
-        let pictureSelected = portfolioGallery.querySelector('.portfolio-img--selected')
+    if (event.target.tagName !== 'IMG') return
+    let pictureSelected = portfolioGallery.querySelector('.portfolio-img--selected')
 
-        console.log(pictureSelected)
-        event.target.parentNode.classList.add('portfolio-img--selected');
-        console.log(pictureSelected)
-        if (pictureSelected) {
-            pictureSelected.classList.remove('portfolio-img--selected');
-        }
+    console.log(pictureSelected)
+    event.target.parentNode.classList.add('portfolio-img--selected');
+    console.log(pictureSelected)
+    if (pictureSelected) {
+        pictureSelected.classList.remove('portfolio-img--selected');
+    }
 
 })
 
@@ -110,11 +110,11 @@ const modalWindow = document.querySelector('.modal');
 console.log(form)
 form.addEventListener('submit', (event) => event.preventDefault())
 
-formButtonSubmit.addEventListener('click', function(){
+formButtonSubmit.addEventListener('click', function () {
     const fieldName = document.querySelector('.form-name');
     const fieldEmail = document.querySelector('.form-email');
     console.log(fieldEmail, fieldName)
-    if(fieldName.validity.valid && fieldEmail.validity.valid){
+    if (fieldName.validity.valid && fieldEmail.validity.valid) {
         modalWindow.classList.remove('display-none');
 
         const fieldSubject = document.querySelector('.form-subject').value.toString();
@@ -126,12 +126,29 @@ formButtonSubmit.addEventListener('click', function(){
         textModalDescribe.innerText = fieldTextarea == false ? "Без описания" : `Описание: ${fieldTextarea}`
 
     }
-} )
+})
 
 const modalBtnOk = document.querySelector('.modal-button');
-modalBtnOk.addEventListener('click', function(){
+modalBtnOk.addEventListener('click', function () {
     modalWindow.classList.add('display-none')
     form.reset()
 })
 
 // =====================================================
+
+// ================  BURGER-MENU ========================
+const burgerIcon = document.querySelector('.burger-icon');
+const burgerMenu = document.querySelector('.burger-wrapper');
+
+burgerIcon.addEventListener('click', function (event) {
+    event.preventDefault();
+    burgerMenu.classList.remove('display-none');
+})
+
+burgerMenu.addEventListener('click', function (event) {
+    let target = event.target;
+    console.log(target.classList)
+    if (target.classList.value == 'icon-item' || target.classList.value == 'burger-icon' || target.classList.value == 'burger-wrapper' || target.classList.value == 'list-link list-link--active') {
+        burgerMenu.classList.add('display-none');
+    }
+})
